@@ -1,0 +1,24 @@
+<div class="col-lg-6">
+    <h2>Striped Rows</h2>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Page</th>
+                    <th>Visits</th>
+                    <th>% New Visits</th>
+                    <th>Revenue</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let data of borderedtables">
+                <tr >
+                    <td>{{data.page}}</td>
+                    <td>{{data.visits}}</td>
+                    <td>{{data.newVisits}}</td>
+                    <td>{{data.revenue}}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>

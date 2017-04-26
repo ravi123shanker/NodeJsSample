@@ -1,0 +1,23 @@
+<li class="dropdown" ngCustomOpen>
+    <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+    <ul class="dropdown-menu message-dropdown">
+        <li class="message-preview" *ngFor="let mail of mails">
+            <a href="#">
+                <div class="media">
+                    <span class="pull-left">
+                        <img class="media-object" src={{mail.userImage}} alt="">
+                    </span>
+                    <div class="media-body">
+                        <h5 class="media-heading"><strong>{{mail.userName}}</strong>
+                        </h5>
+                        <p class="small text-muted"><i class="fa fa-clock-o"></i> {{mail.time}}</p>
+                        <p>{{details}}</p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="message-footer">
+            <a href="#">Read All New Messages</a>
+        </li>
+    </ul>
+</li>

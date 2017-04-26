@@ -1,0 +1,24 @@
+<div class="col-lg-3 col-md-6" [@slideLeft]>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-comments fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge">{{collectables.length}}</div>
+                    <div>New Comments!</div>
+                </div>
+            </div>
+        </div>
+        <a [routerLink]='["comment"]'>
+            <div class="panel-footer">
+                <span >View Details</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+
+                <div class="clearfix"></div>
+            </div>
+        </a>
+<router-outlet></router-outlet>
+    </div>
+</div>
