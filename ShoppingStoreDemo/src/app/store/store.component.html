@@ -1,0 +1,30 @@
+
+<!-- Page Content -->
+<div class="container">
+<div class="row">
+	<!--Items-->
+    <div class="col-md-9">
+
+      <div class="row">
+
+        <div class="col-sm-4 col-lg-4 col-md-4" *ngFor="let item of items">
+          <div class="thumbnail">
+            <img [src]="item.img" alt="">
+            <div class="caption">
+              <h4 class="pull-right">{{item.price}}</h4>
+              <h4><a href="#">{{item.name}}</a>
+              </h4>
+              <p>{{item.Description}}</p>
+            </div>
+            <div class="ratings">
+              <button type="button" class="btn btn-success" (click)="addToKart(item)">Add to Kart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+	<app-my-cart></app-my-cart>
+</div>
+</div>
