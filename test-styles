@@ -1,0 +1,43 @@
+v21-styles.xml
+
+<resources>
+
+    <style name="Theme.Theme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:datePickerStyle">@style/SpinnerDatePicker</item>
+        <item name="android:timePickerStyle">@style/SpinnerTimePicker</item>
+    </style>
+    <style name="SpinnerDatePicker" parent="android:Widget.Material.Light.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+    <style name="SpinnerTimePicker" parent="android:Widget.Material.Light.TimePicker">
+        <item name="android:timePickerMode">spinner</item>
+    </style>
+</resources>
+
+<=========================>
+styles.xml
+
+<style name="Theme.Theme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="actionBarItemBackground">@drawable/selectable_background_theme</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Theme</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Theme</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Theme</item>
+
+        <item name="actionDropDownStyle">@style/DropDownNav.Theme</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Theme</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_theme</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_theme</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Theme</item>
+        <!-- Light.DarkActionBar specific -->
+        <item name="actionBarWidgetTheme">@style/Theme.Theme.Widget</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
