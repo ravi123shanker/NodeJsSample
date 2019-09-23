@@ -161,3 +161,62 @@ function nthPrime(n) {
   }
 }
 
+
+Custom map implementation:
+Array.prototype.myMap=function(callback){
+	const resultArray=[];
+	for(let index=0; index<this.length; index++){
+		resultArray.push(callback(this[index], index, this));
+	}
+	return resultArray;
+}
+const arr=[1,2,3];
+const result=arr.myMap(function(val){
+	return val*2;
+});
+//[2, 4, 6]
+
+Custom Filter implementation:
+Array.prototype.myFilter=function(callback){
+	const resultArray=[];
+	for(let index=0; index<this.length; index++){
+		const result=callback(this[index], index, this);
+		if(result===true){
+			resultArray.push(this[index]);
+		}
+		
+	}
+	return resultArray;
+}
+
+const arr=[1,2,3,4];
+
+const result=arr.myFilter(function(val){
+	return val%2==0;
+});
+//[2, 4]
+
+
+Custom Reduce Implementation:
+Array.prototype.myReducer=function(reducer, initialValue){
+	let accumulator = initialValue === undefined ? 0 : initialValue
+	for(let index=0; index<this.length; index++){
+		accumulator=reducer(accumulator, this[index], index, this);
+		
+		
+	}
+	return accumulator;
+}
+
+const arr=[1,2,3,4];
+
+const result=arr.myReducer(function(accumulator, currentValue){
+	return accumulator+currentValue
+})
+//10
+
+const result=arr.myReducer(function(accumulator, currentValue){
+	return accumulator+currentValue
+}, 5)
+//15
+
